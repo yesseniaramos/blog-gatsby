@@ -1,29 +1,16 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { Button } from 'semantic-ui-react'
+import BlogLayout from "../layouts/BlogLayout"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
-  </Layout>
-)
-
-export default IndexPage
+export default function Home() {
+  return (
+    <BlogLayout>
+      
+      <h1>Estamos en la home del blog</h1>
+      <h2>Hola</h2>
+      <p>Esto es un parrafo</p>
+      <Button primary>Primary</Button>
+      <Button secondary>Secondary</Button>
+    </BlogLayout>
+  )
+}
